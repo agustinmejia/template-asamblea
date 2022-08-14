@@ -18,9 +18,13 @@ Route::get('login', function () {
 })->name('login');
 
 Route::get('/', function () {
-    return redirect('admin');
+    return view('welcome');
 });
 
+Route::get('/article/{slug}', function ($slug) {
+    $article = App\Models\Article::where('slug', $slug)->first();
+    return view('article', compact('article'));
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
