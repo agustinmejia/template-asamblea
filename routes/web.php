@@ -26,6 +26,10 @@ Route::get('/article/{slug}', function ($slug) {
     return view('article', compact('article'));
 });
 
+Route::get('/people', function () {
+    return view('people');
+});
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

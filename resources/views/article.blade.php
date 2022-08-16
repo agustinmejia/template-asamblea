@@ -14,7 +14,7 @@
 @section('css')
     <style>
         .breadcrumbs{
-            height: 200px !important;
+            min-height: 380px !important;
             background: url('{{ asset('storage/'.$article->banner) }}') center;
             background-size: cover;
             position: relative;
@@ -23,7 +23,7 @@
             width: 100%;
             height: 100%;
             z-index: 0px;
-            background-color: rgba(255,255,255,0.7);
+            background-color: rgba(0,0,0,0.6);
             /* backdrop-filter: blur(1px); */
             position: absolute
         }
@@ -38,9 +38,13 @@
             <div class="container" style="position: absolute; z-index: 100; padding: 15px">
                 <ol>
                     <li><a href="{{ url('') }}">Inicio</a></li>
-                    <li>Noticia</li>
+                    <li class="text-white">Noticias</li>
                 </ol>
-                <h2>{{ $article->title }} <br> <small class="text-secondary" style="font-size: 15px">{{ $article->subtitle }}</small></h2>
+                <br>
+                <h3 class="text-white">{{ $article->title }}</h3>
+                <small class="text-white" style="font-size: 14px">{{ $article->subtitle }}</small> <br>
+                <small class="text-white" style="font-size: 12px"><i>Publicado el {{ date('d/M/Y', strtotime($article->publish_date)) }}</i></small>
+                <br>
             </div>
         </section><!-- End Breadcrumbs -->
         <section class="inner-page">

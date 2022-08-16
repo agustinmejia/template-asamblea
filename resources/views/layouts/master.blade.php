@@ -78,7 +78,7 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                <li><a class="nav-link scrollto active" href="{{ url('') }}">Inicio</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('') }}">Inicio</a></li>
                 <!-- <li><a class="nav-link scrollto" href="#about">Acerca de</a></li>
                 <li><a class="nav-link scrollto" href="#services">Noticias</a></li>
                 <li><a class="nav-link scrollto " href="#portfolio">Galería</a></li>
@@ -126,61 +126,49 @@
                 <div class="container">
                     <div class="row">
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-info">
-                        <h3>ALDB</h3>
-                        <p>
-                            Calle 9 de Abril S/N <br>
-                            Santísima Trinidad, Beni<br><br>
-                            <strong>Telefono:</strong> (3)-46-34398<br>
-                            <strong>Email:</strong> info@example.com<br>
-                        </p>
-                        <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="footer-info">
+                                <h3>ALDB</h3>
+                                <p>
+                                    Calle 9 de Abril S/N <br>
+                                    Santísima Trinidad, Beni<br><br>
+                                    <strong>Telefono:</strong> (3)-46-34398<br>
+                                    <strong>Email:</strong> info@example.com<br>
+                                </p>
+                                <div class="social-links mt-3">
+                                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                </div>
+                            </div>
                         </div>
+                        <!-- ======= Footer - del medio ======= -->
+                        <div class="col-lg-2 col-md-6 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            </ul>
                         </div>
-                    </div>
-                    <!-- ======= Footer - del medio ======= -->
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                        </ul>
-                    </div>
 
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Our Services</h4>
-                        <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- ======= <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Our Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                        <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
-
-                    </div> ======= -->
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
-                        {{-- <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1324.7954188201188!2d-64.90132041836014!3d-14.83169361935661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93dd6e2b515935e1%3A0xea158f73ebf5d5fa!2s539X%2BJRC%2C%20Trinidad!5e0!3m2!1ses!2sbo!4v1659934015706!5m2!1ses!2sbo" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
-                    </div>
-
-
-
+                        <div class="col-lg-2 col-md-6 footer-links">
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6 footer-newsletter">
+                            {{-- <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1324.7954188201188!2d-64.90132041836014!3d-14.83169361935661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93dd6e2b515935e1%3A0xea158f73ebf5d5fa!2s539X%2BJRC%2C%20Trinidad!5e0!3m2!1ses!2sbo!4v1659934015706!5m2!1ses!2sbo" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+                        </div>
                     </div>
                 </div>
             </div>

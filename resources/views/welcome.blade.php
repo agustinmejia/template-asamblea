@@ -201,19 +201,23 @@
                     </div>
                     <div class="row gy-5">
                         @foreach ($articles as $item)
-                            <a href="{{ url('article/'.$item->slug) }}">
-                                <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                                <a href="{{ url('article/'.$item->slug) }}">
                                     <div class="service-item">
-                                        <div class="img">
+                                        <div class="img" style="height: 200px">
                                             <img src="{{ asset('storage/'.str_replace('.', '-medium.', $item->banner)) }}" class="img-fluid" alt="img">
                                         </div>
-                                        <div class="details position-relative">
-                                            <h3>{{ $item->title }}</h3>
-                                            <p class="text-secondary">{{ $item->subtitle }}</p>
+                                        <div class="details position-relative" style="height: 220px">
+                                            <div style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">
+                                                <h3>{{ $item->title }}</h3>
+                                            </div>
+                                            <div style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">
+                                                <p class="text-secondary">{{ $item->subtitle }}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         @endforeach
                     </div>
                 </div>
@@ -378,9 +382,9 @@
                         <img src="assets/img/team/team-1.jpg" alt="">
                         <h4>Edgar Segundo Rea Avaroma </h4>
                         <span>Presidente de la Asamblea legislativa departamental del beni</span>
-                        <p>
+                        {{-- <p>
                             Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                        </p>
+                        </p> --}}
                         <div class="social">
                             <a href=""><i class="bi bi-twitter"></i></a>
                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -395,9 +399,7 @@
                         <img src="assets/img/team/team-2.jpg" alt="">
                         <h4>Sarah Jhinson</h4>
                         <span>Product Manager</span>
-                        <p>
-                            Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                        </p>
+
                         <div class="social">
                             <a href=""><i class="bi bi-twitter"></i></a>
                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -412,9 +414,6 @@
                         <img src="assets/img/team/team-3.jpg" alt="">
                         <h4>William Anderson</h4>
                         <span>CTO</span>
-                        <p>
-                            Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                        </p>
                         <div class="social">
                             <a href=""><i class="bi bi-twitter"></i></a>
                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -426,8 +425,15 @@
 
                 </div>
 
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a href="{{ url('people') }}" class="btn btn-success"><i class="bi bi-list"></i> Ver todos</a>
+                    </div>
+                </div>
+
             </div>
-        </section><!-- End Team Section -->
+        </section>
+        <!-- End Team Section -->
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
