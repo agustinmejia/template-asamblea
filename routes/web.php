@@ -21,17 +21,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/article/{slug}', function ($slug) {
+Route::get('article/{slug}', function ($slug) {
     $article = App\Models\Article::where('slug', $slug)->first();
     return view('article', compact('article'));
 });
 
-Route::get('/people', function () {
+Route::get('people', function () {
     return view('people');
 });
 
-Route::get('/gaceta', function () {
+Route::get('gaceta', function () {
     return view('gaceta');
+});
+
+Route::get('gaceta/list', function () {
+    return view('gaceta_list');
 });
 
 Route::group(['prefix' => 'admin'], function () {

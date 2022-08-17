@@ -33,5 +33,7 @@ class PermissionsTableSeeder extends Seeder
         Permission::generateFor('settings');
         Permission::generateFor('articles');
         Permission::generateFor('people');
+        Permission::generateFor('publications_types');
+        Permission::generateFor('publications');
     }
 }

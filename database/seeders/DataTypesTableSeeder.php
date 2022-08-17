@@ -127,6 +127,42 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2022-08-17 00:12:17',
                 'updated_at' => '2022-08-17 00:21:42',
             ),
+            6 => 
+            array (
+                'id' => 7,
+                'name' => 'publications_types',
+                'slug' => 'publications-types',
+                'display_name_singular' => 'Tipo de publicación',
+                'display_name_plural' => 'Tipos de publicación',
+                'icon' => 'voyager-list',
+                'model_name' => 'App\\Models\\PublicationsType',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+                'created_at' => '2022-08-17 09:13:45',
+                'updated_at' => '2022-08-17 09:13:45',
+            ),
+            7 => 
+            array (
+                'id' => 8,
+                'name' => 'publications',
+                'slug' => 'publications',
+                'display_name_singular' => 'Publicación',
+                'display_name_plural' => 'Publicaciones',
+                'icon' => 'voyager-documentation',
+                'model_name' => 'App\\Models\\Publication',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2022-08-17 10:33:46',
+                'updated_at' => '2022-08-17 14:18:31',
+            ),
         ));
         
         
