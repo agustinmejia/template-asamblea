@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('seo')
+    <title>Asambleistas - ALDB</title>
     <meta name="description" content="Miembros de la Asamblea Legislativa Departamental del Beni">
     <meta name="keywords" content="asamblea, legislativa, beni, trinidad, alcaldia">
 
@@ -48,54 +49,33 @@
         <section class="inner-page">
             <div class="container">
                 <!-- ======= Team Section ======= -->
-                <section id="team" class="team">
+                <section id="team" class="team" style="padding-top: 0px">
                     <div class="container">
+                        <div class="section-title">
+                            <span>Asambleistas</span>
+                            <h2>Asambleistas</h2>
+                            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+                        </div>
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                                <div class="member">
-                                <img src="assets/img/team/team-1.jpg" alt="">
-                                <h4>Edgar Segundo Rea Avaroma </h4>
-                                <span>Presidente de la Asamblea legislativa departamental del beni</span>
-                                {{-- <p>
-                                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                                </p> --}}
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                            @forelse (App\Models\Person::where('status', 1)->get() as $item)
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+                                    <div class="member">
+                                        <img src="assets/img/team/team-1.jpg" alt="">
+                                        <h4>{{ $item->full_name }}</h4>
+                                        <span>{{ $item->job }}</span>
+                                        {{-- <p>
+                                            Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                                        </p> --}}
+                                        <div class="social">
+                                            <a href="{{ $item->link_facebook ?? '#' }}"><i class="bi bi-facebook"></i></a>
+                                            <a href="{{ $item->link_twitter ?? '#' }}"><i class="bi bi-twitter"></i></a>
+                                            <a href="{{ $item->link_linkedin ?? '#' }}"><i class="bi bi-linkedin"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                                <div class="member">
-                                <img src="assets/img/team/team-2.jpg" alt="">
-                                <h4>Sarah Jhinson</h4>
-                                <span>Product Manager</span>
-
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                                <div class="member">
-                                <img src="assets/img/team/team-3.jpg" alt="">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                                </div>
-                            </div>
+                            @empty
+                                
+                            @endforelse
                         </div>
                     </div>
                 </section>

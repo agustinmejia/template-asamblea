@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('seo')
+    <title>Bienvenido - ALDB</title>
     <meta name="description" content="Asamblea Legislativa Departamental del Beni">
     <meta name="keywords" content="asamblea, legislativa, beni, trinidad, alcaldia">
 
@@ -33,9 +34,9 @@
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
                         <h3>ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI.</h3>
                         <p class="fst-italic">
-                        La Asamblea Legislativa Departamental, es el órgano representativo con facultad deliberativa, legislativa, fiscalizadora, 
-                        de control y censura del Gobierno Departamental Autónomo del Beni, conforme a lo establecido por la Constitución Política del Estado y por el Estatuto del Departamento Autónomo del Beni.
-                        ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI
+                            La Asamblea Legislativa Departamental, es el órgano representativo con facultad deliberativa, legislativa, fiscalizadora, 
+                            de control y censura del Gobierno Departamental Autónomo del Beni, conforme a lo establecido por la Constitución Política del Estado y por el Estatuto del Departamento Autónomo del Beni.
+                            ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI
                         </p>
                         
                     </div>
@@ -377,52 +378,25 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                        <div class="member">
-                        <img src="assets/img/team/team-1.jpg" alt="">
-                        <h4>Edgar Segundo Rea Avaroma </h4>
-                        <span>Presidente de la Asamblea legislativa departamental del beni</span>
-                        {{-- <p>
-                            Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                        </p> --}}
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                    @forelse (App\Models\Person::where('status', 1)->where('show', 1)->get() as $item)
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+                            <div class="member">
+                                <img src="assets/img/team/team-1.jpg" alt="">
+                                <h4>{{ $item->full_name }}</h4>
+                                <span>{{ $item->job }}</span>
+                                {{-- <p>
+                                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                                </p> --}}
+                                <div class="social">
+                                    <a href="{{ $item->link_facebook ?? '#' }}"><i class="bi bi-facebook"></i></a>
+                                    <a href="{{ $item->link_twitter ?? '#' }}"><i class="bi bi-twitter"></i></a>
+                                    <a href="{{ $item->link_linkedin ?? '#' }}"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                        <div class="member">
-                        <img src="assets/img/team/team-2.jpg" alt="">
-                        <h4>Sarah Jhinson</h4>
-                        <span>Product Manager</span>
-
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                        <div class="member">
-                        <img src="assets/img/team/team-3.jpg" alt="">
-                        <h4>William Anderson</h4>
-                        <span>CTO</span>
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                        </div>
-                    </div>
-
+                    @empty
+                        
+                    @endforelse
                 </div>
 
                 <div class="row">

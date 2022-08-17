@@ -3,8 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-        <title>ALDB | Bienvenido</title>
         
         {{-- SEO --}}
         @yield('seo')
@@ -74,7 +72,7 @@
 
             <!--  <h1 class="logo"><a href="index.html">Day</a></h1>-->
             <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+            <a href="{{ url('') }}" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
 
             <nav id="navbar" class="navbar">
                 <ul>
@@ -98,13 +96,15 @@
                     <li><a href="#">Item 2</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#"><span>Comisión</span> <i class="bi bi-chevron-down"></i></a>
+                <li><a class="nav-link scrollto" href="{{ url('people') }}">Asambleistas</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('gaceta') }}">Gaceta</a></li>
+                {{-- <li class="dropdown"><a href="#"><span>Gaceta</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                     <li><a href="#">Item 1</a></li>
                     <li><a href="#">Item 2</a></li>
                     </ul>
-                </li>
-                <li class="dropdown"><a href="#"><span>Gaceta</span> <i class="bi bi-chevron-down"></i></a>
+                </li> --}}
+                <li class="dropdown"><a href="#"><span>Comisión</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                     <li><a href="#">Item 1</a></li>
                     <li><a href="#">Item 2</a></li>
@@ -167,7 +167,7 @@
                             </ul>
                         </div>
                         <div class="col-lg-4 col-md-6 footer-newsletter">
-                            {{-- <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1324.7954188201188!2d-64.90132041836014!3d-14.83169361935661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93dd6e2b515935e1%3A0xea158f73ebf5d5fa!2s539X%2BJRC%2C%20Trinidad!5e0!3m2!1ses!2sbo!4v1659934015706!5m2!1ses!2sbo" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+                            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1324.7954188201188!2d-64.90132041836014!3d-14.83169361935661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93dd6e2b515935e1%3A0xea158f73ebf5d5fa!2s539X%2BJRC%2C%20Trinidad!5e0!3m2!1ses!2sbo!4v1659934015706!5m2!1ses!2sbo" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>

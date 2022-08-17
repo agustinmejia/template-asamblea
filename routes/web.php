@@ -30,6 +30,10 @@ Route::get('/people', function () {
     return view('people');
 });
 
+Route::get('/gaceta', function () {
+    return view('gaceta');
+});
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
