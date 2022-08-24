@@ -30,12 +30,12 @@ class DataTypesTableSeeder extends Seeder
                 'model_name' => 'TCG\\Voyager\\Models\\User',
                 'policy_name' => 'TCG\\Voyager\\Policies\\UserPolicy',
                 'controller' => 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController',
-                'description' => '',
+                'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => NULL,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"desc","default_search_key":null,"scope":null}',
                 'created_at' => '2021-06-02 17:55:30',
-                'updated_at' => '2021-06-02 17:55:30',
+                'updated_at' => '2022-08-23 23:35:41',
             ),
             1 => 
             array (
@@ -107,7 +107,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2022-08-14 13:55:16',
-                'updated_at' => '2022-08-14 17:16:47',
+                'updated_at' => '2022-08-23 23:34:40',
             ),
             5 => 
             array (
@@ -125,7 +125,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2022-08-17 00:12:17',
-                'updated_at' => '2022-08-17 00:21:42',
+                'updated_at' => '2022-08-23 23:34:50',
             ),
             6 => 
             array (
@@ -141,9 +141,9 @@ class DataTypesTableSeeder extends Seeder
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2022-08-17 09:13:45',
-                'updated_at' => '2022-08-17 09:13:45',
+                'updated_at' => '2022-08-23 23:34:25',
             ),
             7 => 
             array (
@@ -161,7 +161,25 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2022-08-17 10:33:46',
-                'updated_at' => '2022-08-17 14:18:31',
+                'updated_at' => '2022-08-23 23:35:00',
+            ),
+            8 => 
+            array (
+                'id' => 9,
+                'name' => 'publications_categories',
+                'slug' => 'publications-categories',
+                'display_name_singular' => 'Categoría',
+                'display_name_plural' => 'Categorías',
+                'icon' => 'voyager-list',
+                'model_name' => 'App\\Models\\PublicationsCategory',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+                'created_at' => '2022-08-23 23:34:07',
+                'updated_at' => '2022-08-23 23:34:07',
             ),
         ));
         

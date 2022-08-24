@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePublicationsTypesTable extends Migration
+class CreatePublicationsCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreatePublicationsTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('publications_types', function (Blueprint $table) {
+        Schema::create('publications_categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('publications_category_id')->nullable()->constrained('publications_categories');
             $table->string('title')->nullable();
             $table->string('slug')->unique();
-            $table->string('icon')->nullable();
-            $table->string('image')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
@@ -33,6 +30,6 @@ class CreatePublicationsTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publications_types');
+        Schema::dropIfExists('publications_categories');
     }
 }
