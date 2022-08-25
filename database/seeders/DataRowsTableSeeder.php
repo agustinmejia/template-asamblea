@@ -936,11 +936,11 @@ class DataRowsTableSeeder extends Seeder
                 'id' => 58,
                 'data_type_id' => 7,
                 'field' => 'icon',
-                'type' => 'select_dropdown',
+                'type' => 'hidden',
                 'display_name' => 'Icono',
                 'required' => 0,
-                'browse' => 1,
-                'read' => 1,
+                'browse' => 0,
+                'read' => 0,
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
@@ -952,15 +952,15 @@ class DataRowsTableSeeder extends Seeder
                 'id' => 59,
                 'data_type_id' => 7,
                 'field' => 'image',
-                'type' => 'image',
+                'type' => 'hidden',
                 'display_name' => 'Image',
                 'required' => 0,
-                'browse' => 1,
-                'read' => 1,
+                'browse' => 0,
+                'read' => 0,
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"display":{"width":6}}',
+                'details' => '{}',
                 'order' => 7,
             ),
             59 => 
@@ -1280,7 +1280,7 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"model":"App\\\\Models\\\\PublicationsCategory","table":"publications_categories","type":"belongsTo","column":"publications_category_id","key":"id","label":"title","pivot_table":"articles","pivot":"0","taggable":"0"}',
+                'details' => '{"display":{"width":6},"model":"App\\\\Models\\\\PublicationsCategory","table":"publications_categories","type":"belongsTo","column":"publications_category_id","key":"id","label":"title","pivot_table":"articles","pivot":"0","taggable":"0"}',
                 'order' => 3,
             ),
             79 => 
@@ -1361,7 +1361,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 4,
+                'order' => 5,
             ),
             84 => 
             array (
@@ -1377,7 +1377,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 5,
+                'order' => 6,
             ),
             85 => 
             array (
@@ -1393,7 +1393,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 6,
+                'order' => 7,
             ),
             86 => 
             array (
@@ -1409,7 +1409,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 7,
+                'order' => 8,
             ),
             87 => 
             array (
@@ -1426,6 +1426,22 @@ class DataRowsTableSeeder extends Seeder
                 'delete' => 1,
                 'details' => '{}',
                 'order' => 6,
+            ),
+            88 => 
+            array (
+                'id' => 90,
+                'data_type_id' => 9,
+                'field' => 'image',
+                'type' => 'image',
+                'display_name' => 'Imagen',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"display":{"width":6},"resize":{"width":"1000","height":null},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"256","height":"256"}}]}',
+                'order' => 4,
             ),
         ));
         

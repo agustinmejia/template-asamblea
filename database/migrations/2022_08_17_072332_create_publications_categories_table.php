@@ -17,6 +17,7 @@ class CreatePublicationsCategoriesTable extends Migration
             $table->id();
             $table->string('title')->nullable();
             $table->string('slug')->unique();
+            $table->string('image')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
