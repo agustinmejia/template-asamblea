@@ -634,6 +634,7 @@ section {
 .why-us .box:hover p,
 .why-us .box:hover small,
 .why-us .box:hover hr,
+.why-us .box:hover li,
 .why-us .box:hover a {
   color: #fff;
 }

@@ -368,7 +368,7 @@
 
     
         <!-- ======= Team Section ======= -->
-        <section id="team" class="team">
+        {{-- <section id="team" class="team">
             <div class="container">
 
                 <div class="section-title">
@@ -379,14 +379,17 @@
 
                 <div class="row">
                     @forelse (App\Models\Person::where('status', 1)->where('show', 1)->get() as $item)
+                        @php
+                            $image = "images/avatar.jpg";
+                            if($item->image){
+                                $image = asset('storage/'.str_replace('.', '-cropped.', $item->image));
+                            }
+                        @endphp
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
                             <div class="member">
-                                <img src="assets/img/team/team-1.jpg" alt="">
+                                <img src="{{ $image }}" alt="{{ $item->full_name }}">
                                 <h4>{{ $item->full_name }}</h4>
                                 <span>{{ $item->job }}</span>
-                                {{-- <p>
-                                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                                </p> --}}
                                 <div class="social">
                                     <a href="{{ $item->link_facebook ?? '#' }}"><i class="bi bi-facebook"></i></a>
                                     <a href="{{ $item->link_twitter ?? '#' }}"><i class="bi bi-twitter"></i></a>
@@ -406,7 +409,7 @@
                 </div>
 
             </div>
-        </section>
+        </section> --}}
         <!-- End Team Section -->
 
         <!-- ======= Contact Section ======= -->

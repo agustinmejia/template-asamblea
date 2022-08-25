@@ -2,13 +2,13 @@
 
 @section('seo')
     <title>Gaceta - ALDB</title>
-    <meta name="description" content="Miembros de la Asamblea Legislativa Departamental del Beni">
+    <meta name="description" content="Publicación de Leyes, Decretos y Resoluciones">
     <meta name="keywords" content="asamblea, legislativa, beni, trinidad, alcaldia">
 
     <meta property="og:url"           content="{{ url('') }}" />
     <meta property="og:type"          content="Blog" />
     <meta property="og:title"         content="ALDB" />
-    <meta property="og:description"   content="Miembros de la Asamblea Legislativa Departamental del Beni" />
+    <meta property="og:description"   content="Publicación de Leyes, Decretos y Resoluciones" />
     <meta property="og:image"         content="{{ asset('assets/img/banner-gaceta.jpg') }}" />
 @endsection
 
@@ -27,6 +27,12 @@
             background-color: rgba(0,0,0,0.6);
             /* backdrop-filter: blur(1px); */
             position: absolute
+        }
+        .text-ellipsis{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     </style>
 @endsection
@@ -56,27 +62,36 @@
                             <h2>Gaceta</h2>
                             <p>Es el instrumento informativo que tiene por objeto publicar de manera permanente las Leyes, Decretos y de Gobernación, Resoluciones y sobre todo cualquier otro documento de carácter general que emita la Asamblea Legislativa del Beni.</p>
                         </div>
-                        <div id="pucations_list"></div>
+                        <div class="row">
+                            @forelse (App\Models\PublicationsCategory::where('deleted_at', null)->get() as $item)
+                                <div class="col-lg-3 mb-2" data-aos="fade-up">
+                                    <a href="{{ url('gaceta/'.$item->slug) }}" class="text-black">
+                                        <div class="box" style="height: 300px !important">
+                                            <div class="text-ellipsis" style="-webkit-line-clamp: 1;">
+                                                <h4 class="text-center">{{ $item->title }}</h4>
+                                            </div>
+                                            <ul>
+                                                @foreach ($item->types as $type)
+                                                    <li>
+                                                        <div class="text-ellipsis" style="-webkit-line-clamp: 1;">
+                                                            {{ $type->title }}
+                                                        </div>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            @empty
+                                <div class="col-md-12">
+                                    <h4 class="text-center">No hay resultados</h4>
+                                </div>
+                            @endforelse
+                        </div>
                     </div>
                 </section>
                 <!-- End Team Section -->
             </div>
         </section>
     </main><!-- End #main -->
-@endsection
-
-@section('script')
-    <script src="{{ asset('vendor/input-tags/js/jquery.min.js') }}"></script>
-    <script>
-        $(document).ready(function(){
-            getPublications();
-        });
-
-        function getPublications(){
-            let url = "{{ url('gaceta/list') }}";
-            $.get(`${url}`, function(res){
-                $('#pucations_list').html(res);
-            });
-        }
-    </script>
 @endsection

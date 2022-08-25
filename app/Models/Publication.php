@@ -10,4 +10,8 @@ class Publication extends Model
 {
     use HasFactory, SoftDeletes;
     protected $dates = ['deleted_at'];
+
+    public function type(){
+        return $this->belongsTo(PublicationsType::class, 'publications_type_id');
+    }
 }

@@ -22,12 +22,12 @@ class PublicationsCategoriesTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'title' => 'Legislatura',
-                'slug' => 'legislatura',
+                'title' => 'Legislaturas',
+                'slug' => 'legislaturas',
                 'image' => NULL,
-                'description' => NULL,
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
                 'created_at' => '2022-08-25 00:19:22',
-                'updated_at' => '2022-08-25 00:19:22',
+                'updated_at' => '2022-08-25 18:25:35',
                 'deleted_at' => NULL,
             ),
             1 => 
@@ -36,9 +36,9 @@ class PublicationsCategoriesTableSeeder extends Seeder
                 'title' => 'Promulgaciones',
                 'slug' => 'promulgaciones',
                 'image' => NULL,
-                'description' => NULL,
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
                 'created_at' => '2022-08-25 00:19:43',
-                'updated_at' => '2022-08-25 00:19:43',
+                'updated_at' => '2022-08-25 18:27:57',
                 'deleted_at' => NULL,
             ),
             2 => 
@@ -47,9 +47,9 @@ class PublicationsCategoriesTableSeeder extends Seeder
                 'title' => 'Varios',
                 'slug' => 'varios',
                 'image' => NULL,
-                'description' => NULL,
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
                 'created_at' => '2022-08-25 00:19:48',
-                'updated_at' => '2022-08-25 00:19:48',
+                'updated_at' => '2022-08-25 18:28:04',
                 'deleted_at' => NULL,
             ),
         ));

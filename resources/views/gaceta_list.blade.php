@@ -1,5 +1,5 @@
 <div class="row">
-    @forelse (App\Models\Publication::where('status', 1)->get() as $item)
+    @forelse ($publications as $item)
         <div class="col-lg-6" data-aos="fade-up">
             <div class="box" style="height: 400px !important">
                 {{-- <span>56</span> --}}
@@ -17,13 +17,17 @@
                 <hr>
                 <div style="position: absolute; bottom: 10px; right: 30px">
                     @php
-                        $url = '#';
+                        $url = '';
                         if($item->file){
                             $file = json_decode($item->file);
-                            $url = $file[0]->download_link;
+                            if(count($file)){
+                                $url = $file[0]->download_link;
+                            }
                         }
                     @endphp
-                    <a href="{{ url('storage/'.$url) }}" title="Descargar" target="_blank"><i class="bi bi-download"></i> Descargar</a>
+                    @if ($url)
+                        <a href="{{ url('storage/'.$url) }}" title="Descargar" target="_blank"><i class="bi bi-download"></i> Descargar</a>
+                    @endif
                 </div>
             </div>
         </div>

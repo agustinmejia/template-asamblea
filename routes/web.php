@@ -34,8 +34,15 @@ Route::get('gaceta', function () {
     return view('gaceta');
 });
 
-Route::get('gaceta/list', function () {
-    return view('gaceta_list');
+Route::get('gaceta/{type}', function ($type) {
+    $type = App\Models\PublicationsCategory::where('slug', $type)->first();
+    return view('gaceta-type', compact('type'));
+});
+
+Route::get('gaceta/{type}/list', function ($type) {
+    $type = App\Models\PublicationsCategory::where('slug', $type)->first();
+    $publications = App\Models\Publication::where('publications_type_id', $type->id)->where('status', 1)->get();
+    return view('gaceta_list', compact('publications'));
 });
 
 Route::group(['prefix' => 'admin'], function () {
