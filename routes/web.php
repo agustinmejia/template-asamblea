@@ -26,6 +26,14 @@ Route::get('article/{slug}', function ($slug) {
     return view('article', compact('article'));
 });
 
+Route::get('about', function () {
+    return view('about');
+});
+
+Route::get('comision/{type}', function ($type) {
+    return view('comision_'.$type);
+});
+
 Route::get('people', function () {
     return view('people');
 });

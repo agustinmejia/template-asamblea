@@ -1,14 +1,14 @@
 @extends('layouts.master')
 
 @section('seo')
-    <title>Gaceta - ALDB</title>
-    <meta name="description" content="Miembros de la Asamblea Legislativa Departamental del Beni">
+    <title>{{ $type->title }} - ALDB</title>
+    <meta name="description" content="{{ $type->description }}">
     <meta name="keywords" content="asamblea, legislativa, beni, trinidad, alcaldia">
 
     <meta property="og:url"           content="{{ url('') }}" />
     <meta property="og:type"          content="Blog" />
-    <meta property="og:title"         content="ALDB" />
-    <meta property="og:description"   content="Miembros de la Asamblea Legislativa Departamental del Beni" />
+    <meta property="og:title"         content="{{ $type->title }}" />
+    <meta property="og:description"   content="{{ $type->description }}" />
     <meta property="og:image"         content="{{ asset('assets/img/banner-gaceta.jpg') }}" />
 @endsection
 
@@ -36,14 +36,15 @@
         <!-- ======= Breadcrumbs ======= -->
         <section id="breadcrumbs" class="breadcrumbs">
             <div class="dark-mask"></div>
-            <div class="container" style="position: absolute; z-index: 100; padding: 15px">
+            <div class="container" style="position: absolute; z-index: 10; padding: 15px">
                 <ol>
                     <li><a href="{{ url('') }}">Inicio</a></li>
                     <li class="text-white">Gaceta</li>
                 </ol>
                 <br>
-                <h3 class="text-white">Bienvenido a Gaceta de la ALDB</h3>
-                <br>
+                <h3 class="text-white">{{ $type->title }}</h3>
+                {{-- <br> --}}
+                <p class="text-white">{{ $type->description }}</p>
             </div>
         </section><!-- End Breadcrumbs -->
         <section class="inner-page">

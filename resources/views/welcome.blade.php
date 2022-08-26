@@ -32,18 +32,19 @@
                         <img src="assets/img/about.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-                        <h3>ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI.</h3>
+                        <h3>ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI</h3>
                         <p class="fst-italic">
                             La Asamblea Legislativa Departamental, es el órgano representativo con facultad deliberativa, legislativa, fiscalizadora, 
                             de control y censura del Gobierno Departamental Autónomo del Beni, conforme a lo establecido por la Constitución Política del Estado y por el Estatuto del Departamento Autónomo del Beni.
-                            ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI
+                            ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI.
                         </p>
                         
                     </div>
                 </div>
 
             </div>
-        </section><!-- End About Section -->
+        </section>
+        <!-- End About Section -->
 
         <!-- ======= Why Us Section ======= -->
         <section id="why-us" class="why-us">
@@ -233,9 +234,9 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="text-right">
-                        <h3>Sesiones en Vivo</h3>
-                        <p> Las sesiones de la Asamblea Legislativa Departamental del Beni se transmiten en vivo para transparentar la gestión.</p>
-                        <a class="cta-btn" href="#">Ingresar a la Sesion</a>
+                            <h3>Sesiones en Vivo</h3>
+                            <p> Las sesiones de la Asamblea Legislativa Departamental del Beni se transmiten en vivo para transparentar la gestión.</p>
+                            <a class="cta-btn" href="{{ setting('site.link_lives') }}" target="_blank">Ingresar a la Sesion</a>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -448,43 +449,9 @@
                     </div>
 
                 </div>
-                <!-- =======
-                <div class="row" data-aos="fade-up">
-
-                <div class="col-lg-6 ">
-                    <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1324.7954188201188!2d-64.90132041836014!3d-14.83169361935661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93dd6e2b515935e1%3A0xea158f73ebf5d5fa!2s539X%2BJRC%2C%20Trinidad!5e0!3m2!1ses!2sbo!4v1659934015706!5m2!1ses!2sbo" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-                </div>
-                
-                <div class="col-lg-6">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="col-md-6 form-group mt-3 mt-md-0">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                        </div>
-                    </div>
-                    <div class="form-group mt-3">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group mt-3">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="my-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
-                    </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
-                    </form>
-                </div>  
-
-                </div> ======= -->
-
             </div>
-        </section><!-- End Contact Section -->
-
+        </section>
+        <!-- End Contact Section -->
     </main>
     <!-- End #main -->
 @endsection

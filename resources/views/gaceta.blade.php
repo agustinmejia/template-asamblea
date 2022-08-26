@@ -42,14 +42,15 @@
         <!-- ======= Breadcrumbs ======= -->
         <section id="breadcrumbs" class="breadcrumbs">
             <div class="dark-mask"></div>
-            <div class="container" style="position: absolute; z-index: 100; padding: 15px">
+            <div class="container" style="position: absolute; z-index: 10; padding: 15px">
                 <ol>
                     <li><a href="{{ url('') }}">Inicio</a></li>
                     <li class="text-white">Gaceta</li>
                 </ol>
                 <br>
                 <h3 class="text-white">Bienvenido a Gaceta de la ALDB</h3>
-                <br>
+                {{-- <br> --}}
+                <p class="text-white">Es el instrumento informativo que tiene por objeto publicar de manera permanente las Leyes, Decretos y de Gobernación, Resoluciones y sobre todo cualquier otro documento de carácter general que emita la Asamblea Legislativa del Beni.</p>
             </div>
         </section><!-- End Breadcrumbs -->
         <section class="inner-page">

@@ -36,7 +36,7 @@
         <!-- ======= Breadcrumbs ======= -->
         <section id="breadcrumbs" class="breadcrumbs">
             <div class="dark-mask"></div>
-            <div class="container" style="position: absolute; z-index: 100; padding: 15px">
+            <div class="container" style="position: absolute; z-index: 10; padding: 15px">
                 <ol>
                     <li><a href="{{ url('') }}">Inicio</a></li>
                     <li class="text-white">Asambleistas</li>
@@ -74,7 +74,9 @@
                                     </div>
                                 </div>
                             @empty
-                                
+                                <div class="col-md-12">
+                                    <h4 class="text-center">No hay resultados</h4>
+                                </div>
                             @endforelse
                         </div>
                     </div>

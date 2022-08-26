@@ -60,7 +60,7 @@ class SettingsTableSeeder extends Seeder
                 'value' => NULL,
                 'details' => '',
                 'type' => 'text',
-                'order' => 4,
+                'order' => 6,
                 'group' => 'Site',
             ),
             4 => 
@@ -128,6 +128,17 @@ class SettingsTableSeeder extends Seeder
                 'type' => 'text',
                 'order' => 5,
                 'group' => 'Admin',
+            ),
+            10 => 
+            array (
+                'id' => 11,
+                'key' => 'site.link_lives',
+                'display_name' => 'Link lives',
+                'value' => 'https://www.facebook.com/Asamblea-Legislativa-Departamental-del-Beni-154109110092310',
+                'details' => NULL,
+                'type' => 'text',
+                'order' => 4,
+                'group' => 'Site',
             ),
         ));
         

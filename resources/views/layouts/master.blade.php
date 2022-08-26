@@ -74,49 +74,46 @@
             <!-- Uncomment below if you prefer to use an image logo -->
             <a href="{{ url('') }}" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
 
+            @php
+                $url = explode('/', url()->current());
+                if(count($url) == 3){
+                    $uri = 'home';
+                }else {
+                    $uri = $url[3];
+                }
+            @endphp
             <nav id="navbar" class="navbar">
                 <ul>
-                <li><a class="nav-link scrollto" href="{{ url('') }}">Inicio</a></li>
-                <!-- <li><a class="nav-link scrollto" href="#about">Acerca de</a></li>
-                <li><a class="nav-link scrollto" href="#services">Noticias</a></li>
-                <li><a class="nav-link scrollto " href="#portfolio">Galería</a></li>
-                <li><a class="nav-link scrollto" href="#team">Asambleistas</a></li> -->
-                <li class="dropdown"><a href="#"><span>Marco Constitucional</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                    <li><a class="nav-link scrollto @if($uri == 'home') active @endif" href="{{ url('') }}">Inicio</a></li>
+                    <li class="dropdown @if($uri == 'about') active @endif"><a href="#"><span>Marco Constitucional</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                        <li><a href="#">Deep Drop Down 1</a></li>
-                        <li><a href="#">Deep Drop Down 2</a></li>
-                        <li><a href="#">Deep Drop Down 3</a></li>
-                        <li><a href="#">Deep Drop Down 4</a></li>
-                        <li><a href="#">Deep Drop Down 5</a></li>
+                            <li><a href="{{ url('about') }}">Quienes somos</a></li>
+                            <li><a href="#">Organigrama</a></li>
+                            <li><a href="#">Facultades</a></li>
                         </ul>
-                    </li> -->
-                    <li><a href="#">Item 2</a></li>
-                    </ul>
-                </li>
-                <li><a class="nav-link scrollto" href="{{ url('people') }}">Asambleistas</a></li>
-                <li><a class="nav-link scrollto" href="{{ url('gaceta') }}">Gaceta</a></li>
-                {{-- <li class="dropdown"><a href="#"><span>Gaceta</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    </ul>
-                </li> --}}
-                <li class="dropdown"><a href="#"><span>Comisión</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    </ul>
-                </li>
-                <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+                    </li>
+                    <li class="dropdown @if($uri == 'comision') active @endif"><a href="#"><span>Comisión</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="{{ url('comision/constitucion') }}">Comisión de constitución</a></li>
+                            <li><a href="{{ url('comision/realaciones_internacionales') }}">Comisión de relaciones internacionales</a></li>
+                            <li><a href="{{ url('comision/hacienda') }}">Comisión de hacienda y presupuesto</a></li>
+                            <li><a href="{{ url('comision/desarrollo_humano') }}">Comisión de desarrollo humano</a></li>
+                            <li><a href="{{ url('comision/derechos_humanos') }}">Comisión de derechos humanos</a></li>
+                            <li><a href="{{ url('comision/desarrollo_economico') }}">Comisión de desarrollo económico</a></li>
+                            <li><a href="{{ url('comision/obras_publicas') }}">Comisión de obras públicas</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto @if($uri == 'people') active @endif" href="{{ url('people') }}">Asambleistas</a></li>
+                    <li><a class="nav-link scrollto @if($uri == 'gaceta') active @endif" href="{{ url('gaceta') }}">Gaceta</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
+            </nav>
+            <!-- .navbar -->
 
             </div>
-        </header><!-- End Header -->
+        </header>
+        <!-- End Header -->
 
         @yield('content')
 
