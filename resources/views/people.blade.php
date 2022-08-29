@@ -48,19 +48,29 @@
         </section><!-- End Breadcrumbs -->
         <section class="inner-page">
             <div class="container">
+                @php
+                    $type = strtolower(request('type'));
+                    // dd($type);
+                @endphp
                 <!-- ======= Team Section ======= -->
                 <section id="team" class="team" style="padding-top: 0px">
                     <div class="container">
                         <div class="section-title">
-                            <span>Asambleistas</span>
-                            <h2>Asambleistas</h2>
-                            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+                            <span>{{ $type }}</span>
+                            <h2>{{ $type }}</h2>
+                            {{-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> --}}
                         </div>
                         <div class="row">
-                            @forelse (App\Models\Person::where('status', 1)->get() as $item)
+                            @forelse (App\Models\Person::whereRaw("LOWER(type) = '$type'")->where('status', 1)->get() as $item)
+                                @php
+                                    $image = "images/avatar.jpg";
+                                    if($item->image){
+                                        $image = asset('storage/'.str_replace('.', '-cropped.', $item->image));
+                                    }
+                                @endphp
                                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
                                     <div class="member">
-                                        <img src="assets/img/team/team-1.jpg" alt="">
+                                        <img src="{{ $image }}" alt="">
                                         <h4>{{ $item->full_name }}</h4>
                                         <span>{{ $item->job }}</span>
                                         {{-- <p>

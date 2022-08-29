@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('seo')
-    <title>Comisión Obras Públicas - ALDB</title>
+    <title>Asambleistas - ALDB</title>
     <meta name="description" content="Miembros de la Asamblea Legislativa Departamental del Beni">
     <meta name="keywords" content="asamblea, legislativa, beni, trinidad, alcaldia">
 
@@ -9,7 +9,7 @@
     <meta property="og:type"          content="Blog" />
     <meta property="og:title"         content="ALDB" />
     <meta property="og:description"   content="Miembros de la Asamblea Legislativa Departamental del Beni" />
-    <meta property="og:image"         content="{{ asset('assets/img/comisiones/obras_publicas.jpg') }}" />
+    <meta property="og:image"         content="{{ asset('assets/img/hero-bg.jpg') }}" />
 @endsection
 
 @section('css')
@@ -38,12 +38,12 @@
         <div class="container" style="position: absolute; z-index: 10; padding: 15px">
             <ol>
                 <li><a href="{{ url('') }}">Inicio</a></li>
-                <li class="text-white">Comisión Obras Públicas</li>
+                <li class="text-white">Facultades</li>
             </ol>
             <br>
-            <h3 class="text-white">Comisión Obras Públicas</h3>
+            <h3 class="text-white">Facultades de la Asamblea Legislativa Departamental del Beni</h3>
             {{-- <br> --}}
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="text-white">La Asamblea Legislativa Departamental, es el órgano representativo con facultad deliberativa, legislativa, fiscalizadora, de control y censura del Gobierno Departamental Autónomo del Beni, conforme a lo establecido por la Constitución Política del Estado y por el Estatuto del Departamento Autónomo del Beni. ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI.</p>
         </div>
     </section>
     <!-- End Breadcrumbs -->
@@ -55,15 +55,16 @@
                 <section id="about" class="about">
                     <div class="container">
                         <div class="row">
-                            {{-- <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-                                <h3>Lorem ipsum dolor sit amet</h3>
-                                <p class="fst-italic">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+                            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+                                <h3>Facultades de la Asamblea Legislativa Departamental</h3>
+                                <p class="fst-italic">La facultad legislativa es la potestad para emitir leyes departamentales en el marco de sus competencias exclusivas, válidas en toda su jurisdicción y para todos los ciudadanos bolivianos residentes en el departamento.</p>
                                 <br>
-                                <h3>sed do eiusmod tempor incididunt ut</h3>
-                                <p class="fst-italic">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
-                            </div> --}}
-                            <div class="col-lg-12 order-1 order-lg-2" data-aos="fade-left">
-                                <img src="{{ asset('assets/img/comisiones/obras_publicas.jpg') }}" class="img-fluid" alt="">
+                                <p class="fst-italic">La facultad deliberativa es la capacidad de debatir y tomar decisiones sobre todos los asuntos de interés departamental de forma consensuada por los miembros del plenario de la Asamblea Departamental.</p>
+                                <br>
+                                <p class="fst-italic">La facultad fiscalizadora es la potestad que tiene de fiscalizar los actos del Órgano Ejecutivo, instituciones y empresas públicas, privadas y/o mixtas, nacionales o extranjeras en la ejecución de políticas, planes, proyectos, programas y el manejo de los recursos departamentales.</p>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+                                <img src="{{ asset('images/about.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
         

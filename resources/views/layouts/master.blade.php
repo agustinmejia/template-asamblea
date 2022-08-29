@@ -87,9 +87,9 @@
                     <li><a class="nav-link scrollto @if($uri == 'home') active @endif" href="{{ url('') }}">Inicio</a></li>
                     <li class="dropdown @if($uri == 'about') active @endif"><a href="#"><span>Marco Constitucional</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="{{ url('about') }}">Quienes somos</a></li>
+                            <li><a href="{{ url('about') }}">Misión y visión</a></li>
                             <li><a href="#">Organigrama</a></li>
-                            <li><a href="#">Facultades</a></li>
+                            <li><a href="{{ url('capacities') }}">Facultades</a></li>
                         </ul>
                     </li>
                     <li class="dropdown @if($uri == 'comision') active @endif"><a href="#"><span>Comisión</span> <i class="bi bi-chevron-down"></i></a>
@@ -103,7 +103,12 @@
                             <li><a href="{{ url('comision/obras_publicas') }}">Comisión de obras públicas</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto @if($uri == 'people') active @endif" href="{{ url('people') }}">Asambleistas</a></li>
+                    <li class="dropdown @if($uri == 'people') active @endif"><a href="#"><span>Asambleistas</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="{{ url('people') }}?type=Mesa directiva">Mesa directiva</a></li>
+                            <li><a href="{{ url('people') }}?type=Titulares">Titulares</a></li>
+                        </ul>
+                    </li>
                     <li><a class="nav-link scrollto @if($uri == 'gaceta') active @endif" href="{{ url('gaceta') }}">Gaceta</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
                 </ul>

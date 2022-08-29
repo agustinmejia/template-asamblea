@@ -30,6 +30,10 @@ Route::get('about', function () {
     return view('about');
 });
 
+Route::get('capacities', function () {
+    return view('capacities');
+});
+
 Route::get('comision/{type}', function ($type) {
     return view('comision_'.$type);
 });

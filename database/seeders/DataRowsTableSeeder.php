@@ -672,7 +672,7 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"validation":{"rule":"required"},"display":{"width":6},"options":{"Principal":"Principal"}}',
+                'details' => '{"validation":{"rule":"required"},"display":{"width":6},"options":{"Mesa directiva":"Mesa directiva","Titulares":"Titulares"}}',
                 'order' => 2,
             ),
             41 => 
