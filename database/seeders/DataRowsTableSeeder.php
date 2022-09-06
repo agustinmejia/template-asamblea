@@ -736,7 +736,7 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"resize":{"width":"1000","height":null},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"256","height":"256"}}]}',
+                'details' => '{"resize":{"width":"1000","height":null},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"256","height":"256"}}],"display":{"width":6}}',
                 'order' => 6,
             ),
             45 => 
@@ -753,7 +753,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 7,
+                'order' => 8,
             ),
             46 => 
             array (
@@ -769,7 +769,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"validation":{"rule":"max:191"},"display":{"width":4}}',
-                'order' => 8,
+                'order' => 9,
             ),
             47 => 
             array (
@@ -785,7 +785,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"validation":{"rule":"max:191"},"display":{"width":4}}',
-                'order' => 9,
+                'order' => 10,
             ),
             48 => 
             array (
@@ -801,7 +801,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"validation":{"rule":"max:191"},"display":{"width":4}}',
-                'order' => 10,
+                'order' => 11,
             ),
             49 => 
             array (
@@ -817,7 +817,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"on":"Visualizar","off":"No visualizar","checked":false,"display":{"width":6}}',
-                'order' => 12,
+                'order' => 13,
             ),
             50 => 
             array (
@@ -833,7 +833,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"on":"Activo","off":"Inactivo","checked":true,"display":{"width":6}}',
-                'order' => 11,
+                'order' => 12,
             ),
             51 => 
             array (
@@ -849,7 +849,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 13,
+                'order' => 14,
             ),
             52 => 
             array (
@@ -865,7 +865,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 14,
+                'order' => 15,
             ),
             53 => 
             array (
@@ -881,7 +881,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 15,
+                'order' => 16,
             ),
             54 => 
             array (
@@ -1442,6 +1442,22 @@ class DataRowsTableSeeder extends Seeder
                 'delete' => 1,
                 'details' => '{"display":{"width":6},"resize":{"width":"1000","height":null},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"256","height":"256"}}]}',
                 'order' => 4,
+            ),
+            89 => 
+            array (
+                'id' => 91,
+                'data_type_id' => 6,
+                'field' => 'image_alt',
+                'type' => 'image',
+                'display_name' => 'Imagen biográfica',
+                'required' => 1,
+                'browse' => 0,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"resize":{"width":"1000","height":null},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"256","height":"256"}}],"display":{"width":6}}',
+                'order' => 7,
             ),
         ));
         

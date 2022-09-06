@@ -68,21 +68,23 @@
                                         $image = asset('storage/'.str_replace('.', '-cropped.', $item->image));
                                     }
                                 @endphp
-                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
-                                    <div class="member">
-                                        <img src="{{ $image }}" alt="">
-                                        <h4>{{ $item->full_name }}</h4>
-                                        <span>{{ $item->job }}</span>
-                                        {{-- <p>
-                                            Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                                        </p> --}}
-                                        <div class="social">
-                                            <a href="{{ $item->link_facebook ?? '#' }}"><i class="bi bi-facebook"></i></a>
-                                            <a href="{{ $item->link_twitter ?? '#' }}"><i class="bi bi-twitter"></i></a>
-                                            <a href="{{ $item->link_linkedin ?? '#' }}"><i class="bi bi-linkedin"></i></a>
+                                <a href="{{ $item->image_alt ? asset('storage/'.$item->image_alt) : $image }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ $item->full_name }}">
+                                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+                                        <div class="member">
+                                            <img src="{{ $image }}" alt="">
+                                            <h4>{{ $item->full_name }}</h4>
+                                            <span>{{ $item->job }}</span>
+                                            {{-- <p>
+                                                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                                            </p> --}}
+                                            <div class="social">
+                                                <a href="{{ $item->link_facebook ?? '#' }}"><i class="bi bi-facebook"></i></a>
+                                                <a href="{{ $item->link_twitter ?? '#' }}"><i class="bi bi-twitter"></i></a>
+                                                <a href="{{ $item->link_linkedin ?? '#' }}"><i class="bi bi-linkedin"></i></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             @empty
                                 <div class="col-md-12">
                                     <h4 class="text-center">No hay resultados</h4>

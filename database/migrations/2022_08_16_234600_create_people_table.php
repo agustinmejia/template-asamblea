@@ -20,6 +20,7 @@ class CreatePeopleTable extends Migration
             $table->string('job')->nullable();
             $table->string('origin')->nullable();
             $table->string('image')->nullable();
+            $table->string('image_alt')->nullable();
             $table->text('details')->nullable();
             $table->string('link_facebook')->nullable();
             $table->string('link_twitter')->nullable();

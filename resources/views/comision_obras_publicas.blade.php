@@ -55,14 +55,14 @@
                 <section id="about" class="about">
                     <div class="container">
                         <div class="row">
-                            {{-- <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+                            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
                                 <h3>Lorem ipsum dolor sit amet</h3>
                                 <p class="fst-italic">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
                                 <br>
                                 <h3>sed do eiusmod tempor incididunt ut</h3>
                                 <p class="fst-italic">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
-                            </div> --}}
-                            <div class="col-lg-12 order-1 order-lg-2" data-aos="fade-left">
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
                                 <img src="{{ asset('assets/img/comisiones/obras_publicas.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>

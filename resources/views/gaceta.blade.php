@@ -15,7 +15,7 @@
 @section('css')
     <style>
         .breadcrumbs{
-            min-height: 380px !important;
+            min-height: 250px !important;
             background: url('{{ asset("assets/img/banner-gaceta.jpg") }}') center top -100px;
             background-size: cover;
             position: relative;
@@ -63,25 +63,34 @@
                             <h2>Gaceta</h2>
                             <p>Es el instrumento informativo que tiene por objeto publicar de manera permanente las Leyes, Decretos y de Gobernación, Resoluciones y sobre todo cualquier otro documento de carácter general que emita la Asamblea Legislativa del Beni.</p>
                         </div>
+                        {{-- <div class="row" style="margin-bottom: 50px">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="button-addon2">
+                                    <button class="btn btn-outline-success" type="button" id="button-addon2"><i class="bx bx-search"></i> Buscar</button>
+                                </div>
+                            </div>
+                        </div> --}}
                         <div class="row">
                             @forelse (App\Models\PublicationsCategory::where('deleted_at', null)->get() as $item)
                                 <div class="col-lg-3 mb-2" data-aos="fade-up">
-                                    <a href="{{ url('gaceta/'.$item->slug) }}" class="text-black">
-                                        <div class="box" style="min-height: 450px !important">
-                                            <div class="text-ellipsis" style="-webkit-line-clamp: 1;">
-                                                <h4 class="text-center">{{ $item->title }}</h4>
-                                            </div>
-                                            <ul>
-                                                @foreach ($item->types as $type)
-                                                    <li>
-                                                        <div class="text-ellipsis" style="-webkit-line-clamp: 1;">
-                                                            {{ $type->title }}
-                                                        </div>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
+                                    <div class="box" style="min-height: 450px !important">
+                                        <div class="text-ellipsis" style="-webkit-line-clamp: 1;">
+                                            <h4 class="text-center">{{ $item->title }}</h4>
                                         </div>
-                                    </a>
+                                        <ul>
+                                            @foreach ($item->types as $type)
+                                                <li>
+                                                    <div class="text-ellipsis" style="-webkit-line-clamp: 1;">
+                                                        <a href="{{ url('gaceta/'.$type->slug) }}">
+                                                            {{ $type->title }}
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                 </div>
                             @empty
                                 <div class="col-md-12">

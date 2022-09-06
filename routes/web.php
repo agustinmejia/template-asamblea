@@ -47,12 +47,13 @@ Route::get('gaceta', function () {
 });
 
 Route::get('gaceta/{type}', function ($type) {
-    $type = App\Models\PublicationsCategory::where('slug', $type)->first();
+    $type = App\Models\PublicationsType::where('slug', $type)->first();
     return view('gaceta-type', compact('type'));
 });
 
 Route::get('gaceta/{type}/list', function ($type) {
-    $type = App\Models\PublicationsCategory::where('slug', $type)->first();
+    $type = App\Models\PublicationsType::where('slug', $type)->first();
+    $search = request('search');
     $publications = App\Models\Publication::where('publications_type_id', $type->id)->where('status', 1)->paginate(10);
     return view('gaceta_list', compact('publications'));
 });
