@@ -28,12 +28,12 @@
             /* backdrop-filter: blur(1px); */
             position: absolute
         }
-        .text-ellipsis{
+        /* .text-ellipsis{
             display: -webkit-box;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-        }
+        } */
     </style>
 @endsection
 
@@ -67,7 +67,7 @@
                             @forelse (App\Models\PublicationsCategory::where('deleted_at', null)->get() as $item)
                                 <div class="col-lg-3 mb-2" data-aos="fade-up">
                                     <a href="{{ url('gaceta/'.$item->slug) }}" class="text-black">
-                                        <div class="box" style="height: 300px !important">
+                                        <div class="box" style="min-height: 450px !important">
                                             <div class="text-ellipsis" style="-webkit-line-clamp: 1;">
                                                 <h4 class="text-center">{{ $item->title }}</h4>
                                             </div>

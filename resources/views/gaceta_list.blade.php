@@ -36,4 +36,28 @@
             <h4 class="text-center">No hay resultados</h4>
         </div>
     @endforelse
+
+    <div class="col-md-12 mt-5 pt-5">
+        <div class="col-md-4" style="overflow-x:auto">
+            @if(count($publications)>0)
+                <p class="text-muted">Mostrando del {{$publications->firstItem()}} al {{$publications->lastItem()}} de {{$publications->total()}} registros.</p>
+            @endif
+        </div>
+        <div class="col-md-8" style="overflow-x:auto">
+            <nav class="text-right">
+                {{ $publications->links() }}
+            </nav>
+        </div>
+    </div>
 </div>
+
+<script>
+    $('.page-link').click(function(e){
+        e.preventDefault();
+        let link = $(this).attr('href');
+        if(link){
+            page = link.split('=')[1];
+            getPublications(page);
+        }
+    });
+</script>

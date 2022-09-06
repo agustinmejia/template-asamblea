@@ -42,7 +42,7 @@
                     <li class="text-white">Asambleistas</li>
                 </ol>
                 <br>
-                <h3 class="text-white">Miembros de la Asamblea Legislativa Departamental del Beni</h3>
+                <h3 class="text-white">{{ request('type') }} de la Asamblea Legislativa Departamental del Beni</h3>
                 <br>
             </div>
         </section><!-- End Breadcrumbs -->

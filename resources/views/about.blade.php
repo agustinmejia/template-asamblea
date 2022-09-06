@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('seo')
-    <title>Asambleistas - ALDB</title>
+    <title>Acerca de - ALDB</title>
     <meta name="description" content="Miembros de la Asamblea Legislativa Departamental del Beni">
     <meta name="keywords" content="asamblea, legislativa, beni, trinidad, alcaldia">
 
-    <meta property="og:url"           content="{{ url('') }}" />
+    <meta property="og:url"           content="{{ url('about') }}" />
     <meta property="og:type"          content="Blog" />
     <meta property="og:title"         content="ALDB" />
     <meta property="og:description"   content="Miembros de la Asamblea Legislativa Departamental del Beni" />

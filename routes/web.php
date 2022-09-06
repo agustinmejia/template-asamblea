@@ -53,7 +53,7 @@ Route::get('gaceta/{type}', function ($type) {
 
 Route::get('gaceta/{type}/list', function ($type) {
     $type = App\Models\PublicationsCategory::where('slug', $type)->first();
-    $publications = App\Models\Publication::where('publications_type_id', $type->id)->where('status', 1)->get();
+    $publications = App\Models\Publication::where('publications_type_id', $type->id)->where('status', 1)->paginate(10);
     return view('gaceta_list', compact('publications'));
 });
 

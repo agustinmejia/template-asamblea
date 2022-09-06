@@ -43,7 +43,7 @@
             <br>
             <h3 class="text-white">Comisión de constitución</h3>
             {{-- <br> --}}
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="text-white">La comisiones permanentes, conformadas por un mínimo  de 3 y un máximo de 5 asambleistas.</p>
         </div>
     </section>
     <!-- End Breadcrumbs -->

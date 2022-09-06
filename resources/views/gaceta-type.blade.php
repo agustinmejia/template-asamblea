@@ -73,11 +73,10 @@
             getPublications();
         });
 
-        function getPublications(){
+        function getPublications(page = 1){
             let type = "{{ $type->slug }}";
-            console.log(type)
             let url = "{{ url('gaceta') }}/"+type+'/list';
-            $.get(`${url}`, function(res){
+            $.get(`${url}?page=${page}`, function(res){
                 $('#pucations_list').html(res);
             });
         }

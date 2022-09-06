@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('seo')
-    <title>Asambleistas - ALDB</title>
+    <title>Facultades - ALDB</title>
     <meta name="description" content="Miembros de la Asamblea Legislativa Departamental del Beni">
     <meta name="keywords" content="asamblea, legislativa, beni, trinidad, alcaldia">
 
-    <meta property="og:url"           content="{{ url('') }}" />
+    <meta property="og:url"           content="{{ url('capacities') }}" />
     <meta property="og:type"          content="Blog" />
     <meta property="og:title"         content="ALDB" />
     <meta property="og:description"   content="Miembros de la Asamblea Legislativa Departamental del Beni" />
@@ -56,11 +56,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-                                <h3>Facultades de la Asamblea Legislativa Departamental</h3>
+                                <h3>Facultad Legislativa</h3>
                                 <p class="fst-italic">La facultad legislativa es la potestad para emitir leyes departamentales en el marco de sus competencias exclusivas, válidas en toda su jurisdicción y para todos los ciudadanos bolivianos residentes en el departamento.</p>
                                 <br>
+                                <h3>Facultad Deliberativa</h3>
                                 <p class="fst-italic">La facultad deliberativa es la capacidad de debatir y tomar decisiones sobre todos los asuntos de interés departamental de forma consensuada por los miembros del plenario de la Asamblea Departamental.</p>
                                 <br>
+                                <h3>Facultad Fiscalizadora</h3>
                                 <p class="fst-italic">La facultad fiscalizadora es la potestad que tiene de fiscalizar los actos del Órgano Ejecutivo, instituciones y empresas públicas, privadas y/o mixtas, nacionales o extranjeras en la ejecución de políticas, planes, proyectos, programas y el manejo de los recursos departamentales.</p>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">

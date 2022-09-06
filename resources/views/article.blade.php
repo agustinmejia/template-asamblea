@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
 @section('seo')
-    <meta name="description" content="{{ $article->title }}">
+    <title>{{ $article->title }} - ALDB</title>
+    <meta name="description" content="{{ $article->subtitle }}">
     <meta name="keywords" content="">
 
     <meta property="og:url"           content="{{ url('article/'.$article->slug) }}" />
@@ -35,7 +36,7 @@
         <!-- ======= Breadcrumbs ======= -->
         <section id="breadcrumbs" class="breadcrumbs">
             <div class="dark-mask"></div>
-            <div class="container" style="position: absolute; z-index: 100; padding: 15px">
+            <div class="container" style="position: absolute; z-index: 10; padding: 15px">
                 <ol>
                     <li><a href="{{ url('') }}">Inicio</a></li>
                     <li class="text-white">Noticias</li>
