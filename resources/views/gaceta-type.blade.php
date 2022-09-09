@@ -61,10 +61,12 @@
                         <div class="row" style="margin-bottom: 50px">
                             <div class="col-md-8"></div>
                             <div class="col-md-4">
-                                <div class="input-group">
-                                    <input type="text" id="input-search" class="form-control" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="button-addon2">
-                                    <button class="btn btn-outline-success" type="button" id="button-addon2"><i class="bx bx-search"></i> Buscar</button>
-                                </div>
+                                <form id="form-search" action="" method="post">
+                                    <div class="input-group">
+                                        <input type="text" id="input-search" class="form-control" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="button-addon2">
+                                        <button class="btn btn-outline-success" type="submit" id="button-addon2"><i class="bx bx-search"></i> Buscar</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                         <div id="pucations_list"></div>
@@ -77,10 +79,14 @@
 @endsection
 
 @section('script')
-    <script src="{{ asset('vendor/input-tags/js/jquery.min.js') }}"></script>
     <script>
         $(document).ready(function(){
             getPublications();
+
+            $('#form-search').submit(function(e){
+                e.preventDefault();
+                getPublications();
+            });
         });
 
         function getPublications(page = 1){

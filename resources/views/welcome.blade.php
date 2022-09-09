@@ -300,7 +300,8 @@
                 </div>
 
             </div>
-        </section><!-- End Portfolio Section -->
+        </section>
+        <!-- End Portfolio Section -->
 
     
         <!-- ======= Team Section ======= -->

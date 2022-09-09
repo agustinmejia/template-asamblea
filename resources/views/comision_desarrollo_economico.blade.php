@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('seo')
-    <title>Comisión Desarrollo Económico - ALDB</title>
+    <title>Comisión de Desarrollo Económico - ALDB</title>
     <meta name="description" content="Miembros de la Asamblea Legislativa Departamental del Beni">
     <meta name="keywords" content="asamblea, legislativa, beni, trinidad, alcaldia">
 
@@ -38,10 +38,10 @@
         <div class="container" style="position: absolute; z-index: 10; padding: 15px">
             <ol>
                 <li><a href="{{ url('') }}">Inicio</a></li>
-                <li class="text-white">Comisión Desarrollo Económico</li>
+                <li class="text-white">Comisión de Desarrollo Económico</li>
             </ol>
             <br>
-            <h3 class="text-white">Comisión Desarrollo Económico</h3>
+            <h3 class="text-white">Comisión de Desarrollo Económico</h3>
             {{-- <br> --}}
             <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
@@ -55,12 +55,22 @@
                 <section id="about" class="about">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-                                <h3>Lorem ipsum dolor sit amet</h3>
-                                <p class="fst-italic">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+                            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+                                <h3>Comisión de Desarrollo Económico</h3>
                                 <br>
-                                <h3>sed do eiusmod tempor incididunt ut</h3>
-                                <p class="fst-italic">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+                                <ul>
+                                    <li>Plan territorial de desarrollo Integral departamental.</li>
+                                    <li>Planes y proyectos productivos.</li>
+                                    <li>Recursos Naturales y Tierra.</li>
+                                    <li>Minería en el ámbito de sus competencias.</li>
+                                    <li>Recursos Hídricos, Agua y Riego.</li>
+                                    <li>Medio ambiente.</li>
+                                    <li>Cambio climático.</li>
+                                    <li>Biodiversidad y áreas protegidas.</li>
+                                    <li>Recursos forestales</li>
+                                    <li>Ordenamiento territorial y plan de  uso de suelo.</li>
+                                    <li>Turismo</li>
+                                </ul>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
                                 <img src="{{ asset('assets/img/comisiones/desarrollo_economico.jpg') }}" class="img-fluid" alt="">

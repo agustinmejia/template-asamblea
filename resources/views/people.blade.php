@@ -68,8 +68,8 @@
                                         $image = asset('storage/'.str_replace('.', '-cropped.', $item->image));
                                     }
                                 @endphp
-                                <a href="{{ $item->image_alt ? asset('storage/'.$item->image_alt) : $image }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ $item->full_name }}">
-                                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+                                    <a href="{{ $item->image_alt ? asset('storage/'.$item->image_alt) : $image }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ $item->full_name }}">
                                         <div class="member">
                                             <img src="{{ $image }}" alt="">
                                             <h4>{{ $item->full_name }}</h4>
@@ -83,8 +83,8 @@
                                                 <a href="{{ $item->link_linkedin ?? '#' }}"><i class="bi bi-linkedin"></i></a>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             @empty
                                 <div class="col-md-12">
                                     <h4 class="text-center">No hay resultados</h4>

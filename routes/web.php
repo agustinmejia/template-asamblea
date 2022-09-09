@@ -54,8 +54,14 @@ Route::get('gaceta/{type}', function ($type) {
 Route::get('gaceta/{type}/list', function ($type) {
     $type = App\Models\PublicationsType::where('slug', $type)->first();
     $search = request('search');
-    $publications = App\Models\Publication::where('publications_type_id', $type->id)->where('status', 1)->paginate(10);
+    $publications = App\Models\Publication::where('publications_type_id', $type->id)->where('status', 1)
+                        ->whereRaw("(title like '%$search%' or tags like '%$search%' or description like '%$search%')")->paginate(10);
     return view('gaceta_list', compact('publications'));
+});
+
+Route::get('bancadas/{slug}', function ($type) {
+    $group = App\Models\Group::where('slug', $type)->first();
+    return view('groups', compact('group'));
 });
 
 Route::group(['prefix' => 'admin'], function () {

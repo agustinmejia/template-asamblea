@@ -181,6 +181,42 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2022-08-23 23:34:07',
                 'updated_at' => '2022-08-25 00:19:02',
             ),
+            9 => 
+            array (
+                'id' => 10,
+                'name' => 'groups',
+                'slug' => 'groups',
+                'display_name_singular' => 'Partidos políticos',
+                'display_name_plural' => 'Partido político',
+                'icon' => 'voyager-list',
+                'model_name' => 'App\\Models\\Group',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2022-09-08 10:55:33',
+                'updated_at' => '2022-09-09 08:31:09',
+            ),
+            10 => 
+            array (
+                'id' => 11,
+                'name' => 'groups_galleries',
+                'slug' => 'groups-galleries',
+                'display_name_singular' => 'Galería',
+                'display_name_plural' => 'Galerías',
+                'icon' => 'voyager-images',
+                'model_name' => 'App\\Models\\GroupsGallery',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2022-09-09 08:34:56',
+                'updated_at' => '2022-09-09 10:42:22',
+            ),
         ));
         
         

@@ -109,6 +109,15 @@
                             <li><a href="{{ url('people') }}?type=Titulares">Titulares</a></li>
                         </ul>
                     </li>
+                    <li class="dropdown @if($uri == 'bancadas') active @endif"><a href="#"><span>Bancadas</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            @forelse (App\Models\Group::where('deleted_at', NULL)->get() as $item)
+                                <li><a href="{{ url('bancadas/'.$item->slug) }}">{{ $item->title }}</a></li>
+                            @empty
+                                <li>Sin datos</li>
+                            @endforelse
+                        </ul>
+                    </li>
                     <li><a class="nav-link scrollto @if($uri == 'gaceta') active @endif" href="{{ url('gaceta') }}">Gaceta</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
                 </ul>
