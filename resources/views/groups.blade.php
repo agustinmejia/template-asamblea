@@ -55,7 +55,7 @@
                         <div class="section-title">
                             <span>{{ $group->title }}</span>
                             <h2>{{ $group->title }}</h2>
-                            {{-- <p>Galeria de Imagenes de Salutaciones Nacionales, Departamentales y Regionales,Sesiones y notas importantes</p> --}}
+                            <p>{{ $group->details }}</p>
                         </div>
 
                         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="150">

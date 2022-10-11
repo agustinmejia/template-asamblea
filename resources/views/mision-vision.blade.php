@@ -51,29 +51,25 @@
     <main id="main">
         <section class="inner-page">
             <div class="container">
-                <!-- ======= About Section ======= -->
+                <!-- ======= Team Section ======= -->
                 <section id="about" class="about">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-                                <img src="assets/img/about.jpg" class="img-fluid" alt="">
-                            </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-                                <h3>ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI</h3>
-                                <p class="fst-italic">
-                                    La Asamblea Legislativa Departamental del Beni es el órgano representativo del Gobierno Autónomo Departamental del Beni, con facultad deliberativa, legislativa, fiscalizadora, de control y censura, conforme a lo establecido por la Constitución Política del Estado y por la Ley Marco de Autonomía y Descentralización N° 031.
-                                </p>
-                                <p class="fst-italic">
-                                    Está conformado por los 28 asambleístas reunidos en sesión ordinaria o extraordinaria.
-                                </p>
-                                <p>24 representantes por las  8 provincias (Tres asambleístas por cada provincia: 2 corresponden al partido que recibió la mayor votación y 1 al segundo lugar).</p>
-                                <p>2 representantes por los pueblos indígenas del departamento 2 asambleístas representante de las comunidades campesinos del Beni.</p>
+                                <h3>Misión</h3>
+                                <p class="fst-italic">Ser el órgano legislativo del Gobierno Autónomo Departamental del Beni, representativo, pluralista, inclusivo y eficiente en el cumplimiento de sus facultades y atribuciones, reconocido como un actor político estratégico para coadyuvar al logro de las grandes aspiraciones de desarrollo  del departamento.</p>
+                                <br>
+                                <h3>Visión</h3>
+                                <p class="fst-italic">Ejercer sus facultades, respetando los principios democráticos, a través de la aprobación de leyes departamentales que impulsen el desarrollo económico y social incluyente, la deliberación con pluralidad política responsable, y la fiscalización efectiva para transparentar el manejo de la administración pública.</p>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+                                <img src="{{ asset('images/about.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
-
+        
                     </div>
                 </section>
-                <!-- End About Section -->
+                <!-- End Team Section -->
             </div>
         </section>
     </main>

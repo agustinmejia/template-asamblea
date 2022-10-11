@@ -43,7 +43,7 @@
             <br>
             <h3 class="text-white">Comisión de Hacienda y Presupuesto</h3>
             {{-- <br> --}}
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="text-white">Las Comisiones son órganos permanentes de trabajo, coordinación, fiscalización, deliberación, legislación, investigación y consulta dentro la estructura orgánica de la Asamblea Legislativa Departamental.  Lo conforman los asambleístas, cada una puede tener un mínimo de tres (3) y máximo cinco (5), con derecho a voz y voto.</p>
         </div>
     </section>
     <!-- End Breadcrumbs -->
@@ -57,7 +57,9 @@
                         <div class="row">
                             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
                                 <h3>Comisión de Hacienda y Presupuesto</h3>
-                                <br>
+                                <p>Las comisiones tienen asignadas un ambiente de trabajo, donde sus miembros se reúnen para realizar tareas y actividades en los temas que les corresponde tratar, de acuerdo a su origen.</p>
+                                <p>De manera general, las comisiones generan peticiones de informes, escritos u orales, minutas de comunicación, revisan proyectos de leyes y emiten informes para el pleno de la asamblea, participan en tareas de inspecciones, participan en reuniones de trabajo por iniciativa o a solicitud externa con representantes de organizaciones o funcionarios públicos, asisten a reuniones de coordinación,  mesas de trabajo, seminarios.  </p>
+                                <p>A continuación, se citan los aspectos que les corresponden conocer:</p>
                                 <ul>
                                     <li>Programación de operaciones y Presupuesto anual y plurianual.</li>
                                     <li>Modificaciones presupuestarias.</li>

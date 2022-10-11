@@ -87,8 +87,9 @@
                     <li><a class="nav-link scrollto @if($uri == 'home') active @endif" href="{{ url('') }}">Inicio</a></li>
                     <li class="dropdown @if($uri == 'about') active @endif"><a href="#"><span>Marco Constitucional</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="{{ url('about') }}">Misión y visión</a></li>
-                            <li><a href="#">Organigrama</a></li>
+                            <li><a href="{{ url('about') }}">Quienes somos</a></li>
+                            <li><a href="{{ url('mision-vision') }}">Misión y visión</a></li>
+                            <li><a href="{{ url('organigrama') }}">Organigrama</a></li>
                             <li><a href="{{ url('capacities') }}">Facultades</a></li>
                         </ul>
                     </li>
@@ -103,12 +104,6 @@
                             <li><a href="{{ url('comision/obras_publicas') }}">Comisión de obras públicas</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown @if($uri == 'people') active @endif"><a href="#"><span>Asambleistas</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="{{ url('people') }}?type=Mesa directiva">Mesa directiva</a></li>
-                            <li><a href="{{ url('people') }}?type=Titulares">Titulares</a></li>
-                        </ul>
-                    </li>
                     <li class="dropdown @if($uri == 'bancadas') active @endif"><a href="#"><span>Bancadas</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             @forelse (App\Models\Group::where('deleted_at', NULL)->get() as $item)
@@ -116,6 +111,12 @@
                             @empty
                                 <li>Sin datos</li>
                             @endforelse
+                        </ul>
+                    </li>
+                    <li class="dropdown @if($uri == 'people') active @endif"><a href="#"><span>Asambleistas</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="{{ url('people') }}?type=Mesa directiva">Mesa directiva</a></li>
+                            <li><a href="{{ url('people') }}?type=Titulares">Titulares</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link scrollto @if($uri == 'gaceta') active @endif" href="{{ url('gaceta') }}">Gaceta</a></li>
@@ -137,7 +138,7 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-8 col-md-6">
                             <div class="footer-info">
                                 <h3>ALDB</h3>
                                 <p>
@@ -155,8 +156,9 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ======= Footer - del medio ======= -->
-                        <div class="col-lg-2 col-md-6 footer-links">
+                        <!-- <div class="col-lg-2 col-md-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
                                 <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
@@ -176,7 +178,8 @@
                                 <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
                                 <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
                             </ul>
-                        </div>
+                        </div> -->
+
                         <div class="col-lg-4 col-md-6 footer-newsletter">
                             @if (env('APP_DEBUG') == false)
                                 <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1324.7954188201188!2d-64.90132041836014!3d-14.83169361935661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93dd6e2b515935e1%3A0xea158f73ebf5d5fa!2s539X%2BJRC%2C%20Trinidad!5e0!3m2!1ses!2sbo!4v1659934015706!5m2!1ses!2sbo" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

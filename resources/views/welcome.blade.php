@@ -16,70 +16,52 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-            <h1>AQUI ENCOTRARAS</h1>
+            <!-- <h1>AQUI ENCOTRARAS</h1>
             <h2>Toda la informacion de la Asamblea Departamental del Beni</h2>
-            <a href="#services" class="btn-get-started scrollto">Ver Noticas</a>
+            <a href="#services" class="btn-get-started scrollto">Ver Noticas</a> -->
         </div>
     </section>
     <!-- End Hero -->
 
     <main id="main">
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-                        <img src="assets/img/about.jpg" class="img-fluid" alt="">
+
+        <!-- ======= Services Section ======= -->
+        @php
+            $articles = App\Models\Article::where('status', 1)->orderBy('id', 'DESC')->get();
+        @endphp
+        @if (count($articles) > 0)
+            <section id="services" class="services">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-title">
+                        <span>últimas Noticas</span>
+                        <h2>últimas Noticas</h2>
+                        <p>Notas de prensa de la Asamblea Legislativa Departamental del Beni</p>
                     </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-                        <h3>ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI</h3>
-                        <p class="fst-italic">
-                            El Gobierno Autónomo Departamental del Beni se conforma por el órgano ejecutivo que es la Gobernación y el órgano ejecutivo legislativo denominado Asamblea Legislativa Departamental del Beni.
-                        </p>
-                        <p class="fst-italic">
-                            La Asamblea Legislativa Departamental, es el órgano representativo con facultad deliberativa, legislativa, fiscalizadora, de control y censura del Gobierno Departamental Autónomo del Beni, conforme a lo establecido por la Constitución Política del Estado y por el Estatuto del Departamento Autónomo del Beni.
-                        </p>
+                    <div class="row gy-5">
+                        @foreach ($articles as $item)
+                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                                <a href="{{ url('article/'.$item->slug) }}">
+                                    <div class="service-item">
+                                        <div class="img" style="height: 200px">
+                                            <img src="{{ asset('storage/'.str_replace('.', '-medium.', $item->banner)) }}" class="img-fluid" alt="img">
+                                        </div>
+                                        <div class="details position-relative" style="height: 220px">
+                                            <div style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">
+                                                <h3>{{ $item->title }}</h3>
+                                            </div>
+                                            <div style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">
+                                                <p class="text-secondary">{{ $item->subtitle }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-
-            </div>
-        </section>
-        <!-- End About Section -->
-
-        <!-- ======= Why Us Section ======= -->
-        <section id="why-us" class="why-us">
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-lg-4" data-aos="fade-up">
-                        <div class="box">
-                        <span>56</span>
-                        <h4>Leyes</h4>
-                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="150">
-                        <div class="box">
-                        <span>12</span>
-                        <h4>Resoluciones</h4>
-                        <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-                        <div class="box">
-                        <span>84</span>
-                        <h4>Proyectos</h4>
-                        <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Why Us Section -->
+            </section>
+        @endif
+        <!-- End Services Section -->
 
         <!-- ======= Clients Section ======= -->
         <section id="clients" class="clients">
@@ -124,43 +106,40 @@
             </div>
         </section><!-- End Clients Section -->
 
-        <!-- ======= Services Section ======= -->
-        @php
-            $articles = App\Models\Article::where('status', 1)->orderBy('id', 'DESC')->get();
-        @endphp
-        @if (count($articles) > 0)
-            <section id="services" class="services">
-                <div class="container" data-aos="fade-up">
-                    <div class="section-title">
-                        <span>últimas Noticas</span>
-                        <h2>últimas Noticas</h2>
-                        <p>Notas de prensa de la Asamblea Legislativa Departamental del Beni</p>
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us mt-5">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="box">
+                        <span>56</span>
+                        <h4>Leyes</h4>
+                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+                        </div>
                     </div>
-                    <div class="row gy-5">
-                        @foreach ($articles as $item)
-                            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                                <a href="{{ url('article/'.$item->slug) }}">
-                                    <div class="service-item">
-                                        <div class="img" style="height: 200px">
-                                            <img src="{{ asset('storage/'.str_replace('.', '-medium.', $item->banner)) }}" class="img-fluid" alt="img">
-                                        </div>
-                                        <div class="details position-relative" style="height: 220px">
-                                            <div style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">
-                                                <h3>{{ $item->title }}</h3>
-                                            </div>
-                                            <div style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">
-                                                <p class="text-secondary">{{ $item->subtitle }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach
+
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="150">
+                        <div class="box">
+                        <span>12</span>
+                        <h4>Resoluciones</h4>
+                        <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+                        </div>
                     </div>
+
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+                        <div class="box">
+                        <span>84</span>
+                        <h4>Proyectos</h4>
+                        <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+                        </div>
+                    </div>
+
                 </div>
-            </section>
-        @endif
-        <!-- End Services Section -->
+
+            </div>
+        </section><!-- End Why Us Section -->
 
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">

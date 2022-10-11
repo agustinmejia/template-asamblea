@@ -30,6 +30,14 @@ Route::get('about', function () {
     return view('about');
 });
 
+Route::get('mision-vision', function () {
+    return view('mision-vision');
+});
+
+Route::get('organigrama', function () {
+    return view('organigrama');
+});
+
 Route::get('capacities', function () {
     return view('capacities');
 });

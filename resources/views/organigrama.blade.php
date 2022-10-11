@@ -1,14 +1,14 @@
 @extends('layouts.master')
 
 @section('seo')
-    <title>Acerca de - ALDB</title>
-    <meta name="description" content="Miembros de la Asamblea Legislativa Departamental del Beni">
+    <title>Organigrama - ALDB</title>
+    <meta name="description" content="Organigrama de la Asamblea Legislativa Departamental del Beni">
     <meta name="keywords" content="asamblea, legislativa, beni, trinidad, alcaldia">
 
     <meta property="og:url"           content="{{ url('about') }}" />
     <meta property="og:type"          content="Blog" />
     <meta property="og:title"         content="ALDB" />
-    <meta property="og:description"   content="Miembros de la Asamblea Legislativa Departamental del Beni" />
+    <meta property="og:description"   content="Organigrama de la Asamblea Legislativa Departamental del Beni" />
     <meta property="og:image"         content="{{ asset('assets/img/hero-bg.jpg') }}" />
 @endsection
 
@@ -38,10 +38,10 @@
         <div class="container" style="position: absolute; z-index: 10; padding: 15px">
             <ol>
                 <li><a href="{{ url('') }}">Inicio</a></li>
-                <li class="text-white">Acerca de</li>
+                <li class="text-white">Organigrama de</li>
             </ol>
             <br>
-            <h3 class="text-white">Acerca de la Asamblea Legislativa Departamental del Beni</h3>
+            <h3 class="text-white">Organigrama de la Asamblea Legislativa Departamental del Beni</h3>
             {{-- <br> --}}
             <p class="text-white">La Asamblea Legislativa Departamental, es el órgano representativo con facultad deliberativa, legislativa, fiscalizadora, de control y censura del Gobierno Departamental Autónomo del Beni, conforme a lo establecido por la Constitución Política del Estado y por el Estatuto del Departamento Autónomo del Beni. ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI.</p>
         </div>
@@ -51,29 +51,30 @@
     <main id="main">
         <section class="inner-page">
             <div class="container">
-                <!-- ======= About Section ======= -->
+                <!-- ======= Team Section ======= -->
                 <section id="about" class="about">
                     <div class="container">
+                        <div class="section-title">
+                            <span>ESTRUCTURA ORGANICA</span>
+                            <h2>ESTRUCTURA ORGANICA</h2>
+                            <!-- <p></p> -->
+                        </div>
                         <div class="row">
-                            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-                                <img src="assets/img/about.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-                                <h3>ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI</h3>
-                                <p class="fst-italic">
-                                    La Asamblea Legislativa Departamental del Beni es el órgano representativo del Gobierno Autónomo Departamental del Beni, con facultad deliberativa, legislativa, fiscalizadora, de control y censura, conforme a lo establecido por la Constitución Política del Estado y por la Ley Marco de Autonomía y Descentralización N° 031.
-                                </p>
-                                <p class="fst-italic">
-                                    Está conformado por los 28 asambleístas reunidos en sesión ordinaria o extraordinaria.
-                                </p>
-                                <p>24 representantes por las  8 provincias (Tres asambleístas por cada provincia: 2 corresponden al partido que recibió la mayor votación y 1 al segundo lugar).</p>
-                                <p>2 representantes por los pueblos indígenas del departamento 2 asambleístas representante de las comunidades campesinos del Beni.</p>
+                            <!-- <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+                                <h3>Misión</h3>
+                                <p class="fst-italic">Ser el órgano legislativo del Gobierno Autónomo Departamental del Beni, representativo, pluralista, inclusivo y eficiente en el cumplimiento de sus facultades y atribuciones, reconocido como un actor político estratégico para coadyuvar al logro de las grandes aspiraciones de desarrollo  del departamento.</p>
+                                <br>
+                                <h3>Visión</h3>
+                                <p class="fst-italic">Ejercer sus facultades, respetando los principios democráticos, a través de la aprobación de leyes departamentales que impulsen el desarrollo económico y social incluyente, la deliberación con pluralidad política responsable, y la fiscalización efectiva para transparentar el manejo de la administración pública.</p>
+                            </div> -->
+                            <div class="col-lg-12 order-1 order-lg-2" data-aos="fade-left">
+                                <img src="{{ asset('images/organigrama.jpg') }}" class="img-fluid" alt="">
                             </div>
                         </div>
-
+        
                     </div>
                 </section>
-                <!-- End About Section -->
+                <!-- End Team Section -->
             </div>
         </section>
     </main>

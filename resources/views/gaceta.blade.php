@@ -34,6 +34,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
         } */
+        .link:hover{
+            text-decoration-line: underline !important;
+        }
     </style>
 @endsection
 
@@ -83,7 +86,7 @@
                                             @foreach ($item->types as $type)
                                                 <li>
                                                     <div class="text-ellipsis" style="-webkit-line-clamp: 1;">
-                                                        <a href="{{ url('gaceta/'.$type->slug) }}">
+                                                        <a href="{{ url('gaceta/'.$type->slug) }}" class="link">
                                                             {{ $type->title }}
                                                         </a>
                                                     </div>
