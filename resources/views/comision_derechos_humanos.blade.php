@@ -57,8 +57,8 @@
                         <div class="row">
                             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
                                 <h3>Comisión de Derechos Humanos</h3>
-                                <p>Las comisiones tienen asignadas un ambiente de trabajo, donde sus miembros se reúnen para realizar tareas y actividades en los temas que les corresponde tratar, de acuerdo a su origen.</p>
-                                <p>De manera general, las comisiones generan peticiones de informes, escritos u orales, minutas de comunicación, revisan proyectos de leyes y emiten informes para el pleno de la asamblea, participan en tareas de inspecciones, participan en reuniones de trabajo por iniciativa o a solicitud externa con representantes de organizaciones o funcionarios públicos, asisten a reuniones de coordinación,  mesas de trabajo, seminarios.  </p>
+                                <p style="text-align: justify !important">Las comisiones tienen asignadas un ambiente de trabajo, donde sus miembros se reúnen para realizar tareas y actividades en los temas que les corresponde tratar, de acuerdo a su origen.</p>
+                                <p style="text-align: justify !important">De manera general, las comisiones generan peticiones de informes, escritos u orales, minutas de comunicación, revisan proyectos de leyes y emiten informes para el pleno de la asamblea, participan en tareas de inspecciones, participan en reuniones de trabajo por iniciativa o a solicitud externa con representantes de organizaciones o funcionarios públicos, asisten a reuniones de coordinación,  mesas de trabajo, seminarios.  </p>
                                 <p>A continuación, se citan los aspectos que les corresponden conocer:</p>
                                 <ul>
                                     <li>Interculturalidad y Patrimonio Cultural.</li>

@@ -43,7 +43,7 @@
             <br>
             <h3 class="text-white">Acerca de la Asamblea Legislativa Departamental del Beni</h3>
             {{-- <br> --}}
-            <p class="text-white">La Asamblea Legislativa Departamental, es el órgano representativo con facultad deliberativa, legislativa, fiscalizadora, de control y censura del Gobierno Departamental Autónomo del Beni, conforme a lo establecido por la Constitución Política del Estado y por el Estatuto del Departamento Autónomo del Beni. ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI.</p>
+            <!-- <p class="text-white">La Asamblea Legislativa Departamental, es el órgano representativo con facultad deliberativa, legislativa, fiscalizadora, de control y censura del Gobierno Departamental Autónomo del Beni, conforme a lo establecido por la Constitución Política del Estado y por el Estatuto del Departamento Autónomo del Beni. ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI.</p> -->
         </div>
     </section>
     <!-- End Breadcrumbs -->
@@ -60,14 +60,14 @@
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
                                 <h3>ASAMBLEA LEGISLATIVA DEPARTAMENTAL DEL BENI</h3>
-                                <p class="fst-italic">
+                                <p class="fst-italic" style="text-align: justify !important">
                                     La Asamblea Legislativa Departamental del Beni es el órgano representativo del Gobierno Autónomo Departamental del Beni, con facultad deliberativa, legislativa, fiscalizadora, de control y censura, conforme a lo establecido por la Constitución Política del Estado y por la Ley Marco de Autonomía y Descentralización N° 031.
                                 </p>
-                                <p class="fst-italic">
+                                <p class="fst-italic" style="text-align: justify !important">
                                     Está conformado por los 28 asambleístas reunidos en sesión ordinaria o extraordinaria.
                                 </p>
-                                <p>24 representantes por las  8 provincias (Tres asambleístas por cada provincia: 2 corresponden al partido que recibió la mayor votación y 1 al segundo lugar).</p>
-                                <p>2 representantes por los pueblos indígenas del departamento 2 asambleístas representante de las comunidades campesinos del Beni.</p>
+                                <p style="text-align: justify !important">24 representantes por las  8 provincias (Tres asambleístas por cada provincia: 2 corresponden al partido que recibió la mayor votación y 1 al segundo lugar).</p>
+                                <p style="text-align: justify !important">2 representantes por los pueblos indígenas del departamento 2 asambleístas representante de las comunidades campesinos del Beni.</p>
                             </div>
                         </div>
 

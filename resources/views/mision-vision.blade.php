@@ -57,10 +57,10 @@
                         <div class="row">
                             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
                                 <h3>Misión</h3>
-                                <p class="fst-italic">Ser el órgano legislativo del Gobierno Autónomo Departamental del Beni, representativo, pluralista, inclusivo y eficiente en el cumplimiento de sus facultades y atribuciones, reconocido como un actor político estratégico para coadyuvar al logro de las grandes aspiraciones de desarrollo  del departamento.</p>
+                                <p class="fst-italic" style="text-align: justify !important">Ser el órgano legislativo del Gobierno Autónomo Departamental del Beni, representativo, pluralista, inclusivo y eficiente en el cumplimiento de sus facultades y atribuciones, reconocido como un actor político estratégico para coadyuvar al logro de las grandes aspiraciones de desarrollo  del departamento.</p>
                                 <br>
                                 <h3>Visión</h3>
-                                <p class="fst-italic">Ejercer sus facultades, respetando los principios democráticos, a través de la aprobación de leyes departamentales que impulsen el desarrollo económico y social incluyente, la deliberación con pluralidad política responsable, y la fiscalización efectiva para transparentar el manejo de la administración pública.</p>
+                                <p class="fst-italic" style="text-align: justify !important">Ejercer sus facultades, respetando los principios democráticos, a través de la aprobación de leyes departamentales que impulsen el desarrollo económico y social incluyente, la deliberación con pluralidad política responsable, y la fiscalización efectiva para transparentar el manejo de la administración pública.</p>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
                                 <img src="{{ asset('images/about.jpg') }}" class="img-fluid" alt="">

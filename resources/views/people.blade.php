@@ -68,12 +68,13 @@
                                         $image = asset('storage/'.str_replace('.', '-cropped.', $item->image));
                                     }
                                 @endphp
-                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+                                <div class="col-lg-4 col-md-6" style="float:none;margin:auto;" data-aos="zoom-in">
                                     <a href="{{ $item->image_alt ? asset('storage/'.$item->image_alt) : $image }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ $item->full_name }}">
                                         <div class="member">
                                             <img src="{{ $image }}" alt="">
                                             <h4>{{ $item->full_name }}</h4>
                                             <span>{{ $item->job }}</span>
+                                            <span style="text-decoration: underline; font-weight: 500">{{ $item->origin }}</span>
                                             {{-- <p>
                                                 Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
                                             </p> --}}

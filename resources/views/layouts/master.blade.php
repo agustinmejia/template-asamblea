@@ -115,8 +115,8 @@
                     </li>
                     <li class="dropdown @if($uri == 'people') active @endif"><a href="#"><span>Asambleistas</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="{{ url('people') }}?type=Mesa directiva">Mesa directiva</a></li>
-                            <li><a href="{{ url('people') }}?type=Titulares">Titulares</a></li>
+                            <li><a href="{{ url('people') }}?type=Directiva">Directiva</a></li>
+                            <li><a href="{{ url('people') }}?type=Asambleistas Titulares">Asambleistas Titulares</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link scrollto @if($uri == 'gaceta') active @endif" href="{{ url('gaceta') }}">Gaceta</a></li>
